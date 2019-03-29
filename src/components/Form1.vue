@@ -9,6 +9,7 @@
                     :label-col="{ span: 5 }"
                     :wrapper-col="{ span: 12 }"
             >
+                <p>axios获取的数据：{{info.name}}  store获取更改的数据{{msg}}</p>
                 <a-input
                         v-decorator="[
           'note',
@@ -42,9 +43,9 @@
             >
                 <a-button
                         type="primary"
-                        html-type="submit"
+                        html-type="button"
                 >
-                    Submit
+                    <router-link to="/home/table">Submit</router-link>
                 </a-button>
             </a-form-item>
         </a-form>
@@ -52,24 +53,40 @@
 </template>
 
 <script>
+    import {mapState,mapActions} from 'vuex'
     export default {
+
         data() {
             return {
+                info:null,
                 formLayout: 'horizontal',
                 form: this.$form.createForm(this),
             };
         },
+        mounted(){
+            this.$nextTick(this.axios.get('http://localhost:8080/data/create.json',{})
+                .then( response => {this.info=response.data;
+                }));
+        },
+        computed:{
+            ...mapState(['msg'])
+        },
         methods: {
-            handleSubmit(e) {
-                e.preventDefault();
-                this.form.validateFields((err, values) => {
-                    if (!err) {
-                        console.log('Received values of form: ', values);
-                    }
-                });
+            ...mapActions(['changeMsg']),
+            handleSubmit() {
+                // e.preventDefault();
+                // this.form.validateFields((err, values) => {
+                //     if (!err) {
+                //         console.log('Received values of form: ', values);
+                //     }
+                // });
+
             },
             handleSelectChange(value) {
                 console.log(value);
+
+
+                this.changeMsg(value === 'male' ? 'man' : 'lady');
                 this.form.setFieldsValue({
                     note: `Hi, ${value === 'male' ? 'man' : 'lady'}!`,
                 });

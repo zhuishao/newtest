@@ -3,5 +3,11 @@
   "version": "1.0.0",
   "dependencies": {
     
-  }
+  },
+  "people": [
+    {"uuid":1,"name": "zhuishao","gender": "man","email": "zhewei.zhu@eacrx.com.cn"},
+    {"uuid":2,"name": "zhangsan","gender": "man","email": "sanzhang.zhu@eacrx.com.cn"},
+    {"uuid":3,"name": "lisi","gender": "man","email": "sili.zhu@eacrx.com.cn"},
+    {"uuid":4,"name": "wanglaowu","gender": "female","email": "laowuwang.zhu@eacrx.com.cn"}
+  ]
 }

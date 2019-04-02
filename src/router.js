@@ -22,6 +22,26 @@ export default new Router({
     {
       path:'/home/table',
       component:()=>import('./components/Table1.vue')
+    },
+    {
+      path:'/home/table2',
+      component:()=>import('./components/Table2.vue')
+    },
+    {
+      path:'/home/tab',
+      component:()=>import('./components/Tab.vue')
+    },
+    {
+      path:'/home/table/export',
+      component:()=>import ('./components/TableModal.vue')
+    },
+    {
+      path:'/home/transfer',
+      component:()=>import('./components/Transfer.vue')
+    },
+    {
+      path:'/home/data',
+      component:()=>import('./components/Data/Axios.vue')
     }
   ]
 })

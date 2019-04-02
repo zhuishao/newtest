@@ -55,12 +55,12 @@
 
 <script>
     const formItemLayout = {
-        labelCol: {span: 4},
+        labelCol: {span: 4,offset:4},
         wrapperCol: {span: 8},
     };
     const formTailLayout = {
-        labelCol: {span: 4},
-        wrapperCol: {span: 8, offset: 4},
+        labelCol: {span: 4,offset:4},
+        wrapperCol: {span: 8, offset: 5},
     };
     export default {
         data() {
@@ -83,7 +83,7 @@
             },
             handleChange(e) {
                 this.checkNick = e.target.checked;
-                debugger;
+
                 this.$nextTick(() => {
                     this.form.validateFields(['nickname'], {force: true});
                 });

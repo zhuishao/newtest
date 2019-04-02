@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    <a-button type="primary" block><router-link to="/home/tab">去tab页</router-link></a-button>
     <Form1></Form1>
     <Form2></Form2>
     <Form3></Form3>

@@ -64,9 +64,7 @@
             };
         },
         mounted(){
-            this.$nextTick(this.axios.get('http://localhost:8080/data/create.json',{})
-                .then( response => {this.info=response.data;
-                }));
+
         },
         computed:{
             ...mapState(['msg'])

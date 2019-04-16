@@ -20,16 +20,8 @@ export default new Router({
       component: () => import(/* webpackChunkName: "about" */ './components/Hello1.vue')
     },
     {
-      path:'/home/table',
-      component:()=>import('./components/Table1.vue')
-    },
-    {
       path:'/home/table2',
-      component:()=>import('./components/Table2.vue')
-    },
-    {
-      path:'/home/tab',
-      component:()=>import('./components/Tab.vue')
+      component:()=>import('./components/table/Table2.vue')
     },
     {
       path:'/home/table/export',
@@ -42,6 +34,22 @@ export default new Router({
     {
       path:'/home/data',
       component:()=>import('./components/Data/Axios.vue')
+    },
+    {
+      path:'/table/table',
+      component:()=>import('./views/Table.vue')
+    },
+    {
+      path:'/button',
+      component:()=>import('@/components/Button.vue'),
+      meta:{
+        requireAuth:true
+      }
+
+    },
+    {
+      path:'/menu',
+      component:()=>import('@/components/Menu/Menu1.vue')
     }
   ]
 })

@@ -11,10 +11,8 @@
         },
         name: "Axios",
         mounted() {
-
             this.axios.get('http://localhost:8088/getClass', {}).then(response => {this.data=response.data}
             )
-
         }
     }
 </script>

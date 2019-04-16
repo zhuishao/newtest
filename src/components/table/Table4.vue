@@ -1,14 +1,12 @@
 <template>
-    <div>
-        <TableModal tableId="table"></TableModal>
-        <a-table id="table" :columns="columns"
-
-                 :rowKey="record => record.login.uuid"
+    <div id="table4">
+        <ExcelExportButton :data_column="columns" data_id="table4"></ExcelExportButton>
+        <a-table :columns="columns"
+                 :rowKey="record => record.id"
                  :dataSource="data"
                  :pagination="pagination"
                  :loading="loading"
                  @change="handleTableChange"
-
         >
             <template slot="name" slot-scope="name">
                 {{name.first}} {{name.last}}
@@ -17,38 +15,35 @@
     </div>
 </template>
 <script>
-    import TableModal from './TableModal'
-
     import reqwest from 'reqwest';
-    function base64 (content) {
-        return window.btoa(unescape(encodeURIComponent(content)));
-    }
+    import ExcelExportButton from "../ExcelExportButton";
 
-        const columns = [{
-        title: '名字',
-        dataIndex: 'name',
+    const columns = [{
+        title: 'Id',
+        dataIndex: 'id',
         sorter: true,
         width: '20%',
-        scopedSlots: {customRender: 'name'},
     }, {
-        title: 'Gender',
-        dataIndex: 'gender',
-        filters: [
-            {text: 'Male', value: 'male'},
-            {text: 'Female', value: 'female'},
-        ],
+        title: 'componentId',
+        dataIndex: 'componentId',
         width: '20%',
     }, {
-        title: 'Email',
-        dataIndex: 'email',
-    }];
+        title: 'componentName',
+        dataIndex: 'componentName',
+    }, {
+        title: "componentNameEnglish",
+        dataIndex: "componentNameEnglish"
+    },
+        {
+            title: "componentType",
+            dataIndex: "componentType"
+        }];
 
     export default {
-        components:{
-            TableModal
-        },
+        components: {ExcelExportButton},
         mounted() {
             this.fetch();
+
         },
         data() {
             return {
@@ -58,14 +53,13 @@
                 columns,
             }
         },
+
         methods: {
-            exportExcel(){
-
-
+            columnsChange() {
+                console.log(this.columns);
             },
-
             handleTableChange(pagination, filters, sorter) {
-
+                // console.log(pagination);
                 const pager = {...this.pagination};
                 pager.current = pagination.current;
                 this.pagination = pager;
@@ -78,10 +72,10 @@
                 });
             },
             fetch(params = {}) {
-                console.log('params:', params);
+                // console.log('params:', params);
                 this.loading = true
                 reqwest({
-                    url: 'https://randomuser.me/api',
+                    url: 'http://localhost:8088/unit/getAll',
                     method: 'get',
                     data: {
                         results: 10,
@@ -94,7 +88,8 @@
                     // pagination.total = data.totalCount;
                     pagination.total = 200;
                     this.loading = false;
-                    this.data = data.results;
+                    this.data = data;
+                    // debugger;
                     this.pagination = pagination;
                 });
             }

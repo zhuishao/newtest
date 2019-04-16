@@ -1,6 +1,5 @@
 <template>
   <div class="home">
-    <a-button type="primary" block><router-link to="/home/tab">去tab页</router-link></a-button>
     <Form1></Form1>
     <Form2></Form2>
     <Form3></Form3>
@@ -16,15 +15,15 @@
 <script>
 // @ is an alias to /src
 
-import Form1 from '@/components/Form1.vue'
-import Form2 from '@/components/Form2.vue'
-import Form3 from '@/components/Form3.vue'
-import Form4 from '@/components/Form4.vue'
-import Form5 from '@/components/Form5.vue'
-import Form6 from '@/components/Form6.vue'
-import Form7 from '@/components/Form7.vue'
-import Form8 from '@/components/Form8.vue'
-import Form9 from '@/components/Form9.vue'
+import Form1 from '@/components/form/Form1.vue'
+import Form2 from '@/components/form/Form2.vue'
+import Form3 from '@/components/form/Form3.vue'
+import Form4 from '@/components/form/Form4.vue'
+import Form5 from '@/components/form/Form5.vue'
+import Form6 from '@/components/form/Form6.vue'
+import Form7 from '@/components/form/Form7.vue'
+import Form8 from '@/components/form/Form8.vue'
+import Form9 from '@/components/form/Form9.vue'
 export default {
   name: 'home',
   components: {

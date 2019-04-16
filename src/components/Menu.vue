@@ -7,18 +7,18 @@
         >
             <a-menu-item key="1">
                 <a-icon type="mail" />
-                表格<router-link to="/home/table2"></router-link>
+                表格<router-link to="/table/table"></router-link>
             </a-menu-item>
             <a-menu-item key="2">
                 <a-icon type="calendar" />
-                Navigation Two
+                表单<router-link to="/"></router-link>
             </a-menu-item>
             <a-sub-menu key="sub1">
-                <span slot="title"><a-icon type="appstore" /><span>Navigation Three</span></span>
-                <a-menu-item key="3">Option 3</a-menu-item>
+                <span slot="title"><a-icon type="appstore" /><span>Button</span></span>
+                <a-menu-item key="3">点我<RouterLink to="/button"></RouterLink></a-menu-item>
                 <a-menu-item key="4">Option 4</a-menu-item>
                 <a-sub-menu key="sub1-2" title="Submenu">
-                    <a-menu-item key="5">Option 5</a-menu-item>
+                    <a-menu-item key="5">Menu<RouterLink to="/menu"></RouterLink></a-menu-item>
                     <a-menu-item key="6">Option 6</a-menu-item>
                 </a-sub-menu>
             </a-sub-menu>

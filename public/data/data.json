@@ -1,0 +1,361 @@
+{
+    "children": [
+        {
+            "entity": {
+                "name": "systemManage",
+                "icon": "setting",
+                "title": "系统管理",
+                "state": "ENABLE",
+                "sort": 0,
+                "value": "",
+                "key": "1"
+            },
+            "children": [
+                {
+                    "entity": {
+                        "name": "authManage",
+                        "icon": "eye",
+                        "title": "权限管理",
+                        "state": "ENABLE",
+                        "sort": 0,
+                        "type": "LINK",
+                        "value": "/system/auth",
+                        "key": "1.1"
+
+                    }
+                },
+                {
+                    "entity": {
+                        "name": "groupManage",
+                        "icon": "usergroup-add",
+                        "title": "操作日志",
+                        "state": "ENABLE",
+                        "sort": 3,
+                        "value": "/system/log",
+                        "key": "1.2"
+                    }
+                }
+            ]
+        },
+        {
+            "entity": {
+                "name": "contentManage",
+                "icon": "laptop",
+                "title": "产品",
+                "state": "ENABLE",
+                "sort": 3,
+                "value": "",
+                "key":"2"
+            },
+            "children": [
+                {
+                    "entity": {
+                        "name": "productionList",
+                        "icon": "laptop",
+                        "title": "产品列表",
+                        "state": "ENABLE",
+                        "sort": 3,
+                        "type": "LINK",
+                        "value": "/production/list",
+                        "key": "2.1"
+                    }
+                },
+                {
+                    "entity": {
+                        "name": "productionQuery",
+                        "icon": "laptop",
+                        "title": "查询产品",
+                        "state": "ENABLE",
+                        "sort": 3,
+                        "type": "LINK",
+                        "value": "/production/query",
+                        "key": "2.2"
+                    }
+                },
+                {
+                    "entity": {
+                        "name": "joblist",
+                        "icon": "laptop",
+                        "title": "工作列表",
+                        "state": "ENABLE",
+                        "sort": 3,
+                        "type": "LINK",
+                        "value": "/job/list",
+                        "key": "2.3"
+                    }
+                }
+            ]
+        },
+        {
+            "entity": {
+                "name": "craftManage",
+                "icon": "setting",
+                "title": "工艺管理",
+                "state": "ENABLE",
+                "sort": 0,
+                "value": "",
+                "key": "3"
+            },
+            "children": [
+                {
+                    "entity": {
+                        "name": "factoryLayout",
+                        "icon": "eye",
+                        "title": "工厂布局",
+                        "state": "ENABLE",
+                        "sort": 0,
+                        "type": "LINK",
+                        "value": "/system/auth",
+                        "key": "3.1"
+
+                    }
+                },
+                {
+                    "entity": {
+                        "name": "calendarManage",
+                        "icon": "usergroup-add",
+                        "title": "日历管理",
+                        "state": "ENABLE",
+                        "sort": 3,
+                        "value": "/system/log",
+                        "key": "3.2"
+                    },
+                    "children": [
+                        {
+                            "entity": {
+                                "name": "calendarPattern",
+                                "icon": "eye",
+                                "title": "日历模式",
+                                "state": "ENABLE",
+                                "sort": 0,
+                                "type": "LINK",
+                                "value": "/system/auth",
+                                "key": "3.2.1"
+                            }
+                        },
+                        {
+                            "entity": {
+                                "name": "factoryCalendar",
+                                "icon": "eye",
+                                "title": "工厂日历",
+                                "state": "ENABLE",
+                                "sort": 0,
+                                "type": "LINK",
+                                "value": "/system/auth",
+                                "key": "3.2.2"
+
+                            }
+                        },
+                        {
+                            "entity": {
+                                "name": "flightManage",
+                                "icon": "eye",
+                                "title": "班次管理",
+                                "state": "ENABLE",
+                                "sort": 0,
+                                "type": "LINK",
+                                "value": "/system/auth",
+                                "key": "3.2.3"
+
+                            }
+                        }
+                    ]
+                },
+                {
+                    "entity": {
+                        "name": "processManage",
+                        "icon": "usergroup-add",
+                        "title": "工序管理",
+                        "state": "ENABLE",
+                        "sort": 3,
+                        "value": "/system/log",
+                        "key": "3.3"
+                    }
+                }
+            ]
+        },{
+            "entity": {
+                "name": "materialManage",
+                "icon": "eye",
+                "title": "物料管理",
+                "state": "ENABLE",
+                "sort": 0,
+                "type": "LINK",
+                "value": "/system/auth",
+                "key": "4"
+
+            }
+        },
+        {
+            "entity": {
+                "name": "productEigenvalueManage",
+                "icon": "eye",
+                "title": "产品特征值管理",
+                "state": "ENABLE",
+                "sort": 0,
+                "type": "LINK",
+                "value": "/system/auth",
+                "key": "5"
+
+            },
+            "children": [
+                {
+                    "entity": {
+                        "name": "wholeCharacteristics",
+                        "icon": "eye",
+                        "title": "全局特征",
+                        "state": "ENABLE",
+                        "sort": 0,
+                        "type": "LINK",
+                        "value": "/system/auth",
+                        "key": "5.1"
+
+                    }
+                },
+                {
+                    "entity": {
+                        "name": "singleProductCharacteristics",
+                        "icon": "eye",
+                        "title": "单一产品特征",
+                        "state": "ENABLE",
+                        "sort": 0,
+                        "type": "LINK",
+                        "value": "/system/auth",
+                        "key": "5.2"
+
+                    }
+                }
+            ]
+        },
+        {
+            "entity": {
+                "name": "planAndForecastManage",
+                "icon": "eye",
+                "title": "计划和预测管理",
+                "state": "ENABLE",
+                "sort": 0,
+                "type": "LINK",
+                "value": "/system/auth",
+                "key": "6"
+
+            }
+
+        },
+        {
+            "entity": {
+                "name": "ospView",
+                "icon": "eye",
+                "title": "OSP视图",
+                "state": "ENABLE",
+                "sort": 0,
+                "type": "LINK",
+                "value": "/system/auth",
+                "key": "7"
+
+            }
+        },
+        {
+            "entity": {
+                "name": "pscView",
+                "icon": "eye",
+                "title": "PSC视图",
+                "state": "ENABLE",
+                "sort": 0,
+                "type": "LINK",
+                "value": "/system/auth",
+                "key": "8"
+
+            }
+        },
+        {
+            "entity": {
+                "name": "orderManage",
+                "icon": "eye",
+                "title": "订单管理",
+                "state": "ENABLE",
+                "sort": 0,
+                "type": "LINK",
+                "value": "/system/auth",
+                "key": "9"
+
+            }
+        },
+        {
+            "entity": {
+                "name": "systemManage",
+                "icon": "eye",
+                "title": "系统管理",
+                "state": "ENABLE",
+                "sort": 0,
+                "type": "LINK",
+                "value": "/system/auth",
+                "key": "10"
+
+            },
+            "children": [
+                {
+                    "entity": {
+                        "name": "userManage",
+                        "icon": "eye",
+                        "title": "用户管理",
+                        "state": "ENABLE",
+                        "sort": 0,
+                        "type": "LINK",
+                        "value": "/system/auth",
+                        "key": "10.1"
+
+                    }
+                },{
+                    "entity": {
+                        "name": "roleManage",
+                        "icon": "eye",
+                        "title": "角色管理",
+                        "state": "ENABLE",
+                        "sort": 0,
+                        "type": "LINK",
+                        "value": "/system/auth",
+                        "key": "10.2"
+
+                    }
+                },{
+                    "entity": {
+                        "name": "operationLog",
+                        "icon": "eye",
+                        "title": "操作日志",
+                        "state": "ENABLE",
+                        "sort": 0,
+                        "type": "LINK",
+                        "value": "/system/auth",
+                        "key": "10.3"
+
+                    }
+                },{
+                    "entity": {
+                        "name": "LogOnToLog",
+                        "icon": "eye",
+                        "title": "登录日志",
+                        "state": "ENABLE",
+                        "sort": 0,
+                        "type": "LINK",
+                        "value": "/system/auth",
+                        "key": "10.4"
+
+                    }
+                },{
+                    "entity": {
+                        "name": "portLog",
+                        "icon": "eye",
+                        "title": "接口日志",
+                        "state": "ENABLE",
+                        "sort": 0,
+                        "type": "LINK",
+                        "value": "/system/auth",
+                        "key": "10.5"
+
+
+                    }
+                }
+            ]
+        }
+    ]
+}

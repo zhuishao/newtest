@@ -17,6 +17,8 @@
             const drawing=document.querySelector('canvas');
             if(drawing.getContext()){
                 let context=drawing.getContext('2d');
+                context.fillStyle='#ff0000';
+
             }
         }
     }

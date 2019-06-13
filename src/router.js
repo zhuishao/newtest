@@ -45,7 +45,14 @@ export default new Router({
       meta:{
         requireAuth:true
       }
-
+    },
+    {
+      path:'/less',
+      component:()=>import('@/views/Less.vue'),
+    },
+    {
+      path:'/canvas',
+      component:()=>import('@/views/Canvas.vue'),
     },
     {
       path:'/menu',

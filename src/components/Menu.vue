@@ -16,10 +16,10 @@
             <a-sub-menu key="sub1">
                 <span slot="title"><a-icon type="appstore" /><span>Button</span></span>
                 <a-menu-item key="3">点我<RouterLink to="/button"></RouterLink></a-menu-item>
-                <a-menu-item key="4">Option 4</a-menu-item>
+                <a-menu-item key="4">less<router-link to="/less"></router-link></a-menu-item>
                 <a-sub-menu key="sub1-2" title="Submenu">
                     <a-menu-item key="5">Menu<RouterLink to="/menu"></RouterLink></a-menu-item>
-                    <a-menu-item key="6">Option 6</a-menu-item>
+                    <a-menu-item key="6">Canvas<router-link to="/canvas"></router-link></a-menu-item>
                 </a-sub-menu>
             </a-sub-menu>
             <a-sub-menu key="sub2">

@@ -37,25 +37,6 @@
             return {
                 collapsed: false,
                 list:data.children
-                // list: [
-                //     {
-                //         key: '1',
-                //         title: 'Option 1',
-                //     }, {
-                //         key: '2',
-                //         title: 'Navigation 2',
-                //         children: [
-                //             {
-                //                 key: '2.1',
-                //                 title: 'Navigation 3',
-                //                 children: [
-                //                     { key: '2.1.1',
-                //                         title: 'Option 2.1.1',
-                //                     },
-                //                 ],
-                //             },
-                //         ],
-                //     }],
             }
         },
         methods: {
